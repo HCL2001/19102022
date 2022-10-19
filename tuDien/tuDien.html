@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>Nhap tu</label>
+    <input type="text" id="valueText">
+    <input type="button" id="btn01" onclick="do_sth()" value="Dich">
+    <p id="Result"></p>
+
+    <script>
+        function do_sth(){
+            let arr_eng = ["Apple", "Banana"];
+            let arr_vie = ["Tao", "Chuoi"];
+            let string =document.getElementById("valueText").value;
+            let index_eng = 0;
+            let result = "";
+            for (let i = 0; i < arr_eng.length; i++){
+                if (string == arr_eng[i]){
+                    index_eng = i;
+                    for (let j = 0; j<arr_vie.length; j++){
+                        if (index_eng == j)
+                            result = arr_vie[j];
+                    }
+                }
+            }
+            document.getElementById("Result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
