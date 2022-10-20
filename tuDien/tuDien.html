@@ -17,6 +17,7 @@
             let string =document.getElementById("valueText").value;
             let index_eng = 0;
             let result = "";
+            var count = 0;
             for (let i = 0; i < arr_eng.length; i++){
                 if (string == arr_eng[i]){
                     index_eng = i;
@@ -26,6 +27,12 @@
                     }
                 }
             }
+
+            if (result === ""){
+                document.write("LMAO");
+            }
+
+
             document.getElementById("Result").innerHTML = result;
         }
     </script>
